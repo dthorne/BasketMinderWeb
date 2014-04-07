@@ -16,14 +16,16 @@ module.exports = function(app){
   });
 
 //get all reports
-  app.post('/reports', function(request, response){
-    console.log('post ', request);
-    db.getAllReports(function(reports, error) {
+  app.post('/reports', function(request, response) {
+    //console.log('post ', request);
+    var report = request.body;
+    console.log(report);
+    db.insertReport(report, function(report, error) {
         if(error) {
-            console.log(error);
+            console.log('error', error);
             response.send(404, error);
         } else {
-            response.send(reports);
+            response.send(report);
         }
     });    
 

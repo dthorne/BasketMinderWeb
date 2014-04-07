@@ -16,10 +16,11 @@ exports.getAllReports = function(callback) {
 }
 
 exports.insertReport = function(report, callback) {
-    db.reports.insert(report, function(err, A) {
-        console.log(err);
-        console.log(A);
-        callback();
-    }
-
+    db.reports.insert(report, function(error, report) {
+        if(error) {
+            callback(null, error);
+        } else {
+            callback(report, null);
+        }
+    });
 }
