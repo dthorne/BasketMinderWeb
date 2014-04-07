@@ -48,6 +48,8 @@ module.exports = function(app){
     res.send(201, user);
   });
 
+
+
   //delete user
   app.del('/user/:id', function(req, res){
     //real service would delete from a real data source

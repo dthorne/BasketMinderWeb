@@ -1,10 +1,11 @@
 var db = require('../providers/mongo-db-provider');
 
+var keys = ['name', 'content'];
+
 module.exports = function(app){
   
   //get all reports
   app.get('/reports', function(request, response){
-    console.log('get reports');
     db.getAllReports(function(reports, error) {
         if(error) {
             console.log(error);
@@ -17,9 +18,9 @@ module.exports = function(app){
 
 //get all reports
   app.post('/reports', function(request, response) {
-    //console.log('post ', request);
     var report = request.body;
-    console.log(report);
+    verfiyReport(report);
+    report = _.pick(report, keys);
     db.insertReport(report, function(report, error) {
         if(error) {
             console.log('error', error);
@@ -30,4 +31,13 @@ module.exports = function(app){
     });    
 
   });
+
+    function verifyReport(report) {
+        var valid = true;
+        _.forEach(keys, function(key) {
+            valid = report.has(key);
+        });
+        return valid;
+    }
+
 };
