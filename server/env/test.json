@@ -1,0 +1,5 @@
+{
+    "appPort": 3000,
+    "endpoint": "/ws",
+    "password": "tempPassword"
+}
