@@ -6,9 +6,6 @@ exports.getAllReports = function(callback) {
         if(err) {
             console.log('No Reports');
             console.log(err);
-        } else {
-            console.log('Reports:');
-            console.log(reports);
         }
         callback(err, reports);
     });
