@@ -5,6 +5,7 @@
 //colors
 bg = #eee;
 positive = #56dd00;
+toolbarHeight = 100px;
 
 body{
   background: bg;
@@ -16,13 +17,22 @@ h1{
   padding-left: 10px;
 }
 
+.toolbar {
+    height: toolbarHeight;
+    img {
+        height: 100%;
+    }
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
   margin-bottom: 2em;
   padding: 0 0 0.5em;
-  li{
-    display: inline;
+    float:right;
+  li {
+    display: inline-block;
+    vertical-align:center
   }
 }
 
@@ -37,6 +47,8 @@ h1{
     margin: 5px 0;
   }
 }
+
+
 
 input[type="button"]{
   margin-top: 10px;
