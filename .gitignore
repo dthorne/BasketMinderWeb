@@ -2,3 +2,4 @@ app/components
 build
 node_modules
 app/styles/*.css
+*.DS_Store

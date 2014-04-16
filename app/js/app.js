@@ -4,6 +4,7 @@ angular.module('app', ['ngResource']).
     //setup URL routes
     $routeProvider.when('/home', {templateUrl: 'templates/home.html'});
     $routeProvider.when('/about', {templateUrl: 'templates/about.html'});
-    $routeProvider.when('/view2', {templateUrl: 'templates/partial2.html', controller: 'MyCtrl2'});
+    $routeProvider.when('/feedback', {templateUrl: 'templates/feedback.html', controller: 'FeedbackController'});
+    $routeProvider.when('/admin', {templateUrl: 'templates/partialAdmin.html', controller: 'AdminController'});
     $routeProvider.otherwise({redirectTo: '/home'});
   }]);

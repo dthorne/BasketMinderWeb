@@ -11,22 +11,28 @@
       <ul class="menu">
         <li><a href="#/home">Home</a></li>
         <li><a href="#/about">About</a></li>
-        <li><a href="#/view2">Feedback</a></li>
+        <li><a href="#/feedback">Feedback</a></li>
+        <li><a href="#/admin">Admin</a></li>
       </ul>
     <div>
+  <hr>
 
   <div ng-view></div>
+  <hr>
   <div>OpenWebStack Structure: v<span app-version></span></div>
 
   <!-- build:js app.js -->
   <script src="js/lib/angular/angular.js"></script>
   <script src="js/lib/angular/angular-resource.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/app.js"></script>     
   <script src="js/controllers/one-ctrl.js"></script>
   <script src="js/controllers/two-ctrl.js"></script>
+  <script src="js/controllers/feedback-controller.js"></script>
+  <script src="js/controllers/admin-controller.js"></script>
   <script src="js/directives/version-directive.js"></script>
   <script src="js/filters/version-filter.js"></script>
   <script src="js/services/user.js"></script>
+  <script src="js/services/admin-service.js"></script>
   <script src="js/services/version-service.js"></script>
   <!-- endbuild -->
 
