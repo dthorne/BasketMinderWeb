@@ -1,16 +1,12 @@
 /* Example controller that uses a service to communicate with a REST web service */
-angular.module('app').controller('AdminController', function($scope, User){
+angular.module('app').controller('AdminController', function($scope, AdminService){
   
-  //get all users
-  var users = User.query(function(){
-    $scope.users = users;
-  });
+  $scope.feedbackList = [];
 
+  init();
 
-  $scope.saveAll = function(){
-    $scope.users.forEach(function(user){
-      user.$update();
-    });
-  };
+  function init() {
+    $scope.feedbackList = AdminService.getFeedbackList();
+  }
 
 });

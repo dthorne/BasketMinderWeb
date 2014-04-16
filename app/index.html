@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="styles/app.css"/>
 </head>
 <body>
-
     <div class="toolbar">
         <img src="img/basket_logo.png"/>
       <ul class="menu">
@@ -16,8 +15,10 @@
         <li><a href="#/admin">Admin</a></li>
       </ul>
     <div>
+  <hr>
 
   <div ng-view></div>
+  <hr>
   <div>OpenWebStack Structure: v<span app-version></span></div>
 
   <!-- build:js app.js -->
@@ -30,6 +31,7 @@
   <script src="js/directives/version-directive.js"></script>
   <script src="js/filters/version-filter.js"></script>
   <script src="js/services/user.js"></script>
+  <script src="js/services/admin-service.js"></script>
   <script src="js/services/version-service.js"></script>
   <!-- endbuild -->
 

@@ -1,8 +1,5 @@
-<div class="users">
-  <div data-ng-init="feedbacklist=[{email: 'johndoe@fake.com', comment: 'Hello I am John.'}, {email: 'janedoe@fake.com', comment: 'Hi I am Jane.'}]">
-    <ul>
-    	<li ng-repeat="feedback in feedbacklist"> {{feedback.email}} - {{feedback.comment}}</li>
-    </ul>
-  </div>
+<div class="Admin">
+  <ul>
+    <li ng-repeat="feedback in feedbackList"> {{feedback.name}} - {{feedback.email}} - {{feedback.body}}</li>
+  </ul>
 </div>
-<hr/>
