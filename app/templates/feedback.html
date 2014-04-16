@@ -1,13 +1,23 @@
 <h1>Feedback</h1>
-<iframe name="hiddenFrame" class="hide"></iframe>
-<form action="WS/reports" method="POST" target="hiddenFrame">
-name<br>
-<input type="text" name="name"><br>
-email<br>
-<input type="text" name="email"><br>
-comment<br>
-<textarea rows="10" cols="50" resizable="false" name="comment" placeholder="This comment will be emailed directly to the developer"></textarea><br>
-<input type="submit" value="Submit">
+
+<form ng-submit="addComment()">
+	name<br>
+	<input type="text" ng-model="yourName" name="name"><br>
+	email<br>
+	<input type="text" ng-model="yourEmail" name="email"><br>
+	comment<br>
+	<textarea rows="10" cols="50" resizable="false" ng-model="yourComment" name="comment" placeholder="This comment will be emailed directly to the developer"></textarea><br>
+	<input type="submit" ng-model="submitBtn" value="Submit">
 </form>
 
 
+<!--<iframe name="hiddenFrame" class="hide"></iframe>
+<form action="WS/reports" method="POST" target="hiddenFrame">
+name<br>
+<input type="text" ng-model="yourName" name="name"><br>
+email<br>
+<input type="text" ng-model="yourEmail" name="email"><br>
+comment<br>
+<textarea rows="10" cols="50" resizable="false" ng-model="yourComment" name="comment" placeholder="This comment will be emailed directly to the developer"></textarea><br>
+<input type="submit" ng-model="submitBtn" value="Submit">
+</form>-->
