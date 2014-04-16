@@ -1,9 +1,13 @@
 var express = require('express');
-var fs = require('fs');
+var fileSystem = require('fs');
 var app = express();
 
+var conf = require('./lib/env').getConf();
+
 //here's how to set things that routes may need access to (drivers, loggers, etc)
-app.set('info', {name: "Open Web App"});
+app.set('info', {name: "BacketMinderWeb"});
+app.set('password', conf.get('password'));
+app.set('endpoint', conf.get('endpoint'));
 
 //development environment
 app.configure('development', function(){
@@ -19,11 +23,10 @@ app.configure('production', function(){
 
 //middleware
 app.use(express.bodyParser());
-app.use(require('./middleware/logging')());
 
 //routes
-fs.readdirSync(__dirname + '/routes').forEach(function(file) {
-  require('./routes/' + file)(app);
+fileSystem.readdirSync(__dirname + '/routes').forEach(function(file) {
+    require('./routes/' + file)(app);
 });
 
 app.listen(3000);

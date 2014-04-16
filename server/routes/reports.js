@@ -6,7 +6,7 @@ var keys = ['name', 'content'];
 module.exports = function(app){
   
   //get all reports
-  app.get(app.get('endpoint') + '/reports', function(request, response){
+  app.get(app.get('endpoint') + '/reports', require('../middleware/authentication')(app), function(request, response){
     db.getAllReports(function(reports, error) {
         if(error) {
             console.log(error);
@@ -17,7 +17,7 @@ module.exports = function(app){
     });    
   });
 
-//get all reports
+//post new report
   app.post(app.get('endpoint') + '/reports', function(request, response) {
     var report = request.body;
 

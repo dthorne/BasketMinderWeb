@@ -182,5 +182,5 @@ module.exports = function(grunt){
   grunt.registerTask('build', ['clean:build', 'stylus', 'copy', 'ngtemplates', 'ngmin', 'concat', 'uglify', 'htmlrefs', 'htmlmin', 'clean:generated']);
   // 'dev' task calls 'watch' which indirectly calls 'karma:unit:run'. This expects to connect to a karma server on port 9100.
   // therefore, be sure to run the karma:unit task in a separate console when running the dev task.
-  grunt.registerTask('dev', ['karma:unit', 'watch']);
+  grunt.registerTask('dev', ['watch']);
 };
