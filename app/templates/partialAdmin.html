@@ -1,11 +1,18 @@
 <div class="Admin">
   <h1>User Feedback</h1>
-  <ul class="well">
-    <table class="table table-striped	">
-    <thead><tr><th>Name</th><th>Email</th><th>Feedback</th></tr></thead>
-    <tbody>
-    <tr ng-repeat="feedback in feedbackList"><td>{{feedback.name}}</td><td>{{feedback.email}}</td><td>{{feedback.content}}</td></tr>
-    </tbody>
-    </table>
-  </ul>
+  <form class="well" ng-submit="submitPassword()">
+      enter password
+      <input class="form-control" type="password" ng-model="enterPassword" name="password"><br>
+      <input type="submit" ng-model="submitBtn" value="Submit">
+  </form>
+  <div ng-if="feedbackList">
+    <ul class="well">
+      <table class="table table-striped	">
+      <thead><tr><th>Name</th><th>Email</th><th>Feedback</th></tr></thead>
+      <tbody>
+      <tr ng-repeat="feedback in feedbackList"><td>{{feedback.name}}</td><td>{{feedback.email}}</td><td>{{feedback.content}}</td></tr>
+      </tbody>
+      </table>
+    </ul>
+  </div>
 </div>
