@@ -7,7 +7,7 @@ exports.getAllReports = function(callback) {
             console.log('No Reports');
             console.log(err);
         }
-        callback(err, reports);
+        callback(reports, err);
     });
 
 }
