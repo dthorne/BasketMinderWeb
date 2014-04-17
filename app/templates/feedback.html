@@ -3,11 +3,17 @@
 <form class="well" ng-submit="addComment()">
 	<div class="form-group">
 	<label>name</label><br>
-	<input class="form-control" type="text" ng-model="yourName" name="name"><br>
+	<input class="form-control" type="text" ng-model="yourName" name="name" required><br>
 	<label>email</label><br>
-	<input class="form-control" type="text" ng-model="yourEmail" name="email"><br>
+	<input class="form-control" type="email" ng-model="yourEmail" name="email"><br>
 	<label>comment</label><br>
-	<textarea class="form-control" rows="10" cols="50" resizable="false" ng-model="yourComment" name="comment" placeholder="This comment will be emailed directly to the developer"></textarea><br>
+	<textarea class="form-control" 
+                required
+                rows="10" cols="50"
+                resizable="false" 
+                ng-model="yourComment" 
+                name="comment" 
+                placeholder="This comment will be sent directly to the developer"></textarea><br>
 	<input type="submit" ng-model="submitBtn" value="Submit">
 	</div>
 </form>

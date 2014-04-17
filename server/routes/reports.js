@@ -22,10 +22,9 @@ module.exports = function(app){
     var report = request.body;
 
     if(verifyReport(report)) {
-        //report = _.pick(report, keys);
         db.insertReport(report, function(report, error) {
             if(error) {
-                console.log('error', error);
+                console.log('error here', error);
                 response.send(404, error);
             } else {
                 response.send(report);

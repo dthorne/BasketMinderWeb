@@ -4,7 +4,6 @@ var app = express();
 
 var conf = require('./lib/env').getConf();
 
-//here's how to set things that routes may need access to (drivers, loggers, etc)
 app.set('info', {name: "BacketMinderWeb"});
 app.set('password', conf.get('password'));
 app.set('endpoint', conf.get('endpoint'));
