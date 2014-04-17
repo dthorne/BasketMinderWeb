@@ -15,10 +15,12 @@ angular.module('app').controller('FeedbackController', function($scope,$http){
     success(function(data, status, headers, config) {
       // this callback will be called asynchronously
       // when the response is available
+      alert("Comment submitted successfully!")
     }).
     error(function(data, status, headers, config) {
       // called asynchronously if an error occurs
       // or server returns response with an error status.
+      alert("There was an error processing the comment")
     });
   };
 
