@@ -12,10 +12,9 @@ angular.module('app').controller('AdminController', function($scope, AdminServic
   }
 
   $scope.submitPassword = function(){
-    // var password = $scope.enterPassword;
     AdminService.submitPassword(function(feedbackList){
         $scope.feedbackList = feedbackList;
-    });
+    }, $scope.enterPassword);
   }
 
 });
