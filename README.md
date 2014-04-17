@@ -14,3 +14,4 @@ Framework:	AngularJS, underscore.js, NodeJS, MongoDB
 Team: 	Dewey McNeill (d.thorne@gmail.com), Todd Brunner, Edward Ekstrom
 
 Run: "node server/app.js" from the root (by default it runs on localhost port 3000)
+	 and "grunt dev" from root in another terminal tab
