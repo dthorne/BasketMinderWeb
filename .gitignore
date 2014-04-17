@@ -4,3 +4,4 @@ node_modules
 app/styles/*.css
 *.DS_Store
 npm-debug.log
+*~

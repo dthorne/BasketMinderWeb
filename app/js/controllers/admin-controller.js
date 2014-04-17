@@ -6,7 +6,9 @@ angular.module('app').controller('AdminController', function($scope, AdminServic
   init();
 
   function init() {
-    $scope.feedbackList = AdminService.getFeedbackList();
+    AdminService.getFeedbackList(function(feedbackList){
+	$scope.feedbackList = feedbackList;	
+    });
   }
 
 });
