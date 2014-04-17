@@ -1,21 +1,9 @@
 angular.module('app').controller('FeedbackController', function($scope,$http){
   
-  //get all users
-  /*var users = User.query(function(){
-    $scope.users = users;
-  });
-
-  $scope.saveAll = function(){
-    $scope.users.forEach(function(user){
-      user.$update();
-    });
-  };*/
-
   $scope.addComment = function(){
   	var name = $scope.yourName;
   	var email = $scope.yourEmail;
   	var comment = $scope.yourComment;
-  	console.log(name + " " + email + " " + comment);
   	
   	var data = {
   		name: name,
