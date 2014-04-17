@@ -1,11 +1,11 @@
 <div class="Admin">
-  <h1>User Feedback</h1>
   <form ng-hide="feedbackList" class="well" ng-submit="submitPassword()">
       enter password
       <input class="form-control" type="password" ng-model="enterPassword" name="password"><br>
       <input type="submit" ng-model="submitBtn" value="Submit">
   </form>
   <div ng-if="feedbackList">
+    <h1>User Feedback</h1>
     <ul class="well">
       <table class="table table-striped	">
       <thead><tr><th>Name</th><th>Email</th><th>Feedback</th></tr></thead>
