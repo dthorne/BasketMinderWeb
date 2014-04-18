@@ -4,7 +4,7 @@ angular.module('app').controller('FeedbackController', function($scope,$http){
   	var name = $scope.yourName;
   	var email = $scope.yourEmail;
   	var comment = $scope.yourComment;
-  	
+  	console.log($scope);
   	var data = {
   		name: name,
   		email:email,
