@@ -2,8 +2,7 @@ angular.module('app').service('AdminService', function($http){
 
 
 	this.submitPassword=function(callback, password){
-		console.log(password);
-		$http({method: 'GET', url: '/WS/reports', headers:{password:password} }).
+		$http({method: 'GET', url: 'ws/reports', headers:{password:password} }).
 		    success(function(data, status, headers, config) {
 		      // this callback will be called asynchronously
 		      // when the response is available

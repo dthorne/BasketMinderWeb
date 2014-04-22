@@ -70,7 +70,7 @@ module.exports = function(grunt){
       img: {
         src: ['app/img/**'],
         dest: 'build/img'
-      }
+	}
     },
 
     //inline all Angular templates as Strings into a JS file that can be concatted in the build

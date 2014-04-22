@@ -4,14 +4,13 @@ angular.module('app').controller('FeedbackController', function($scope,$http){
   	var name = $scope.yourName;
   	var email = $scope.yourEmail;
   	var comment = $scope.yourComment;
-  	console.log($scope);
   	var data = {
   		name: name,
   		email:email,
   		content:comment,
   		date:new Date()
   	}
-  	$http({method: 'POST', url: '/WS/reports', data:data}).
+  	$http({method: 'POST', url: 'WS/reports', data:data}).
     success(function(data, status, headers, config) {
       // this callback will be called asynchronously
       // when the response is available
